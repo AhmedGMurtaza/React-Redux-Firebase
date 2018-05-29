@@ -1,2 +1,2 @@
 # React-Redux-Firebase
-Boilerplate code for React, Redux and Firebase integration
+Customer and order management app using React + Redux + Firebase
