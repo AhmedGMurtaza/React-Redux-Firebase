@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import fire from '../../fire';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
+import { Button } from 'reactstrap';
 
 import CustomersList from './CustomersList';
 import * as customerActions from '../../actions/customers-actions';
@@ -25,7 +26,7 @@ class Customers extends Component{
             return (
                 <div className="wrapper">
                     <div style={{textAlign:'right'}}>
-                        <Link to="/new_customer" className={"button button-md full-width button-primary"}>Add New Customer</Link>
+                        <Link to="/new_customer">Add New Customer</Link>
                     </div>
                     <CustomersList headers={tableHeaders} rows={customers} />
                 </div>

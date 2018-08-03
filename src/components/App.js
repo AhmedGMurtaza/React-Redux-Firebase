@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter,Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 import '../styles/App.css';
 
@@ -10,9 +10,11 @@ import Orders from './orders/Orders';
 import NewOrder from './orders/NewOrder';
 import EditOrder from './orders/EditOrder';
 import EditCustomer from './customers/EditCustomer';
+import Expenses from './expenses/Expenses';
+import EditExpenses from './expenses/EditExpenses';
 
 const App = () => {
-  const links = ['Customers','Orders'];
+  const links = ['Expenses','Customers','Orders'];
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +25,7 @@ const App = () => {
       <BrowserRouter>
         <div>
           <Nav links={links} />  
+          <Route exact path="/expenses" component={Expenses} />
           <Route exact path="/customers" component={Customers} />
           <Route path="/new_customer" component={NewCustomer} />
           <Route exact path="/orders" component={Orders} />
